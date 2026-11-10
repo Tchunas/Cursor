@@ -7,17 +7,16 @@
 - Automacoes: EveoNetwork/automacoes-infra
 
 ## Espelho pessoal
-- Tchunas/Cursor — copia das skills para uso no Cursor
-- Agent Store local espelhado a partir do mesmo SHA
+- Tchunas/Cursor — skills EVEO espelhadas + skills pessoais de aprendizado
+- Agent Store local alinhado
 
 ## Ultimo sync
-- Origem: EveoNetwork/skills-do-time
-- SHA: 033ce3a8c293490a55bee2d4363cb8aa6290b127
-- Direcao: EVEO -> pessoal (espelho)
-- Contribuicoes de volta: somente via Issue + PR nos repos EveoNetwork
+- Origem EVEO skills-do-time: `033ce3a8c293490a55bee2d4363cb8aa6290b127`
+- Skill pessoal nova: `sp2-bgp-transit` (consulta trânsitos BGP SP2, 2026-11-10)
+- Direcao EVEO -> pessoal para skills oficiais; skills pessoais sobem so no espelho Tchunas/Cursor ate PR EVEO
 
 ## Manter sincronizado
-1. Atualizar skills-do-time
-2. Espelhar pasta skills/ para este repo e para o Agent Store
-3. Atualizar este arquivo com o SHA
+1. Pedir sync / usar skill `eveo-sync`
+2. Espelhar `skills/` EVEO para este repo e Agent Store
+3. Atualizar este arquivo
 4. Nunca publicar tokens/credenciais
