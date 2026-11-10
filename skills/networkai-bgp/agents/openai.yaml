@@ -1,0 +1,4 @@
+interface:
+  display_name: "Diagnóstico BGP"
+  short_description: "Sessões, anúncios, rotas e next hop BGP"
+  default_prompt: "Use $networkai-bgp para rastrear este prefixo entre recebimento, RIB, exportação ao peer e encaminhamento."
