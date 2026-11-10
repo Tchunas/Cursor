@@ -1,0 +1,4 @@
+interface:
+  display_name: "Policies de roteamento"
+  short_description: "Ordem, matches e efeito de import/export"
+  default_prompt: "Use $networkai-routing-policies para avaliar esta cadeia de policies e preparar um delta limitado à rota solicitada."
