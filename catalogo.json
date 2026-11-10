@@ -1,0 +1,89 @@
+{
+  "repository": "EveoNetwork/skills-do-time",
+  "components": [
+    {
+      "id": "networkai-routing",
+      "path": "skills/networkai-routing",
+      "purpose": "Investigar roteamento IP entre protocolos, rotas estaticas, OSPF e evidencias locais do NetworkAI; localizar configuracao e fatos para diagnosticos de caminhos e planos de mudanca.",
+      "owner": "@Tadesxz",
+      "acceptance": "Distinguir intenção de anúncio efetivo, localizar os fatos disponíveis e pedir apenas a evidência faltante do alvo autorizado. Não afirmar anúncio, tráfego ou impacto. Caso documentado em SKILL.md; revisão humana pendente.",
+      "status": "experimental",
+      "capability_key": "diagnosticar-roteamento-ip",
+      "decision": "https://github.com/EveoNetwork/padroes-e-documentacao/issues/3",
+      "experiment_goal": "Avaliar utilidade e fronteiras de diagnóstico do procedimento importado, sem operação nem instalação automática.",
+      "exit_criteria": "Mantenedor revisa o caso de aceite e a sobreposição de contratos; promoção ou retirada somente em PR próprio."
+    },
+    {
+      "id": "networkai-bgp",
+      "path": "skills/networkai-bgp",
+      "purpose": "Diagnosticar sessões BGP e prefixos recebidos ou anunciados, elegibilidade de exportação, seleção de caminhos e next hop. Usar para falhas de peering ou de anúncio de uma rota específica.",
+      "owner": "@Tadesxz",
+      "acceptance": "Não equiparar sessão a anúncio. Seguir elegibilidade, RIB, next hop e evidência pós-policy do peer/família exatos; não executar clear ou refresh. Caso documentado em SKILL.md; revisão humana pendente.",
+      "status": "experimental",
+      "capability_key": "diagnosticar-bgp",
+      "decision": "https://github.com/EveoNetwork/padroes-e-documentacao/issues/3",
+      "experiment_goal": "Avaliar utilidade e fronteiras de diagnóstico do procedimento importado, sem operação nem instalação automática.",
+      "exit_criteria": "Mantenedor revisa o caso de aceite e a sobreposição de contratos; promoção ou retirada somente em PR próprio."
+    },
+    {
+      "id": "networkai-igp",
+      "path": "skills/networkai-igp",
+      "purpose": "Diagnosticar OSPFv2/OSPFv3, IS-IS e EIGRP; analisar adjacências, LSDB/topologia, redistribuição e instalação de rotas em Cisco e Juniper.",
+      "owner": "@Tadesxz",
+      "acceptance": "Explicar que 2-Way pode ser normal; conferir papéis DR/BDR e desenho antes de atribuir defeito. Não resetar processo ou mudar timers. Caso documentado em SKILL.md; revisão humana pendente.",
+      "status": "experimental",
+      "capability_key": "diagnosticar-igp",
+      "decision": "https://github.com/EveoNetwork/padroes-e-documentacao/issues/3",
+      "experiment_goal": "Avaliar utilidade e fronteiras de diagnóstico do procedimento importado, sem operação nem instalação automática.",
+      "exit_criteria": "Mantenedor revisa o caso de aceite e a sobreposição de contratos; promoção ou retirada somente em PR próprio."
+    },
+    {
+      "id": "networkai-routing-policies",
+      "path": "skills/networkai-routing-policies",
+      "purpose": "Avaliar policies de roteamento, import/export, prefix-lists e route-maps: ordem, matches, communities, herança e efeito de deltas. Usar para explicar ou planejar o tratamento de rotas por uma policy.",
+      "owner": "@Tadesxz",
+      "acceptance": "Preservar a ordem e reconhecer o término no accept; não concluir que o deny posterior desfaz o aceite nem que esse resultado comprova anúncio real. Caso documentado em SKILL.md; revisão humana pendente.",
+      "status": "experimental",
+      "capability_key": "avaliar-politicas-roteamento",
+      "decision": "https://github.com/EveoNetwork/padroes-e-documentacao/issues/3",
+      "experiment_goal": "Avaliar utilidade e fronteiras de diagnóstico do procedimento importado, sem operação nem instalação automática.",
+      "exit_criteria": "Mantenedor revisa o caso de aceite e a sobreposição de contratos; promoção ou retirada somente em PR próprio."
+    },
+    {
+      "id": "networkai-nettools-sp3",
+      "path": "skills/networkai-nettools-sp3",
+      "purpose": "Planejar Nettools SP3 separando frontend, backend e transporte multivendor.",
+      "owner": "@Tadesxz",
+      "acceptance": "Governanca e testes do destino aprovados; criterios documentais em examples/nettools-sp3/README.md; sem alegar validacao de plataforma.",
+      "status": "experimental",
+      "capability_key": "planejar-nettools-sp3",
+      "decision": "https://github.com/EveoNetwork/skills-do-time/issues/3",
+      "experiment_goal": "Avaliar utilidade do procedimento Nettools para separar frontend, backend e transporte, com dados sintéticos e sem operação.",
+      "exit_criteria": "Mantenedor revisa os casos de aceite e dependências; promoção ou retirada somente em PR próprio com evidências."
+    },
+    {
+      "id": "networkai-fortigate-flow",
+      "path": "skills/networkai-fortigate-flow",
+      "purpose": "Analisar encaminhamento, VIPs, Central SNAT, VPN e dependências HA em artefatos fornecidos.",
+      "owner": "@Tadesxz",
+      "acceptance": "Distinguir VIP de permissão, ordem de ID e NAT central de NAT por política; caso fictício em SKILL.md. Governança/testes estruturais não são avaliação independente de IA.",
+      "status": "experimental",
+      "capability_key": "analisar-fluxos-fortigate",
+      "decision": "https://github.com/EveoNetwork/skills-do-time/issues/5",
+      "experiment_goal": "Avaliar utilidade e fronteiras do método com exemplos sanitizados e revisão humana; sem rede ou instalação automática.",
+      "exit_criteria": "Mantenedor revisa sobreposição, casos e evidências; promoção ou retirada por PR próprio."
+    },
+    {
+      "id": "networkai-contingency-access",
+      "path": "skills/networkai-contingency-access",
+      "purpose": "Avaliar alcance e dependências de VPN alternativa, DNS e firewall do destino.",
+      "owner": "@Tadesxz",
+      "acceptance": "Separar login, DNS, alcance por IP e origem após NAT; não prometer recuperação de redes não cobertas; caso fictício em SKILL.md. Governança/testes estruturais não são avaliação independente de IA.",
+      "status": "experimental",
+      "capability_key": "avaliar-acesso-contingencia",
+      "decision": "https://github.com/EveoNetwork/skills-do-time/issues/5",
+      "experiment_goal": "Avaliar utilidade e fronteiras do método com exemplos sanitizados e revisão humana; sem rede ou instalação automática.",
+      "exit_criteria": "Mantenedor revisa sobreposição, casos e evidências; promoção ou retirada por PR próprio."
+    }
+  ]
+}
