@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nettools SP3"
+  short_description: "Planejar frontend, backend e transporte Nettools SP3"
+  default_prompt: "Use $networkai-nettools-sp3 para revisar o modelo privado Nettools SP3 e preparar deltas, rollback e checks por equipamento."
