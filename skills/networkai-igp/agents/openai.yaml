@@ -1,0 +1,5 @@
+interface:
+  display_name: "IGP — OSPF, IS-IS e EIGRP"
+  short_description: "Adjacências, topologia e rotas de protocolos IGP"
+  default_prompt: "Use $networkai-igp para analisar as evidências fornecidas e indicar a próxima verificação no escopo autorizado."
+
